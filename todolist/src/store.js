@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state:{
     list:[],
-    inputValue:"aaa",
+    inputValue:"请输入要完成事项",
     nextId:5,
     viewKey:'all'
   },

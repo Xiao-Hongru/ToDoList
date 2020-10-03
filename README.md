@@ -1,6 +1,7 @@
 # ToDoList
 # Vuex
-
+使用vuex实现to do list
+!(img)("./img/demo.png")
 组件之间的数据共享（小范围）
 
 - 父向子传值：v-bind属性绑定
