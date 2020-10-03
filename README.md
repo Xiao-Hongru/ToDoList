@@ -1,7 +1,9 @@
 # ToDoList
-# Vuex
 使用vuex实现to do list
-!(img)("./img/demo.png")
+![img](https://github.com/Xiao-Hongru/ToDoList/blob/main/todolist/img/demo.png)
+
+下面是关于vuex的一些笔记
+# Vuex
 组件之间的数据共享（小范围）
 
 - 父向子传值：v-bind属性绑定
