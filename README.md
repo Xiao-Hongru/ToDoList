@@ -60,7 +60,7 @@ new Vue({
 //<template>中this可以省略
 ```
 
-组件中访问state中数据的第一种方式
+组件中访问state中数据的第二种方式
 
 ```js
 import {mapState} from 'vuex'
@@ -105,7 +105,7 @@ methods{
 }
 ```
 
-mutaion中不能写异步的代码，setTimeout是异步的代码
+mutation中不能写异步的代码，setTimeout是异步的代码
 
 
 
@@ -237,7 +237,7 @@ created (){
   <div>xxxxx</div>之间的部分
   ```
 
-- input的变化引起state中数据的变化，调用函数
+- input的变化引起state中数据的变化，调用函数@change
 
   难点：如何获取变化的值：e.target.value
 
@@ -245,15 +245,15 @@ created (){
 
 - 难点：向数组中添加，是push
 
-- 添加前要判断.trim().length是否大于0
+- 添加前要判断str.trim().length是否大于0
 
-  是否要弹出waring项（antd）
+  是否要弹出warning项（antd）this.$message.warning('......')
 
 - 构造要添加的项
 
 #### 需求四 删除列表中某一项
 
-- 先查找要删除项目的index
+- 先查找要删除项目的index(list.findIndex((x)=>{x.id===id})
 - 再用splice删除这一项
 
 #### 需求五 统计数组中满足某条件的数目
@@ -261,6 +261,6 @@ created (){
 - 用getters展示
 - const newList=list.filter(x=>x.id===false)
 
-#### 需求六 三个按钮高亮效果切换
-
+#### 需求六 三个按钮高亮效果切换（双向数据）
+在state中定义viewKey,存储当前高亮的按钮。如果进行了按钮切换，则改变viewKey的值
 如何改变展示效果：更改绑定的type属性是”primary“还是"default",如何判断应该是那个，看看viewKey值等于什么（三个三元表达式）
